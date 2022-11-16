@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+
+   body{
+    background-image: url(../img/img9.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+    section{
+        display:flex;
+        justify-content: space-between;
+        
+    }
+    .my_order,.info_domicilio{
+         height: auto;
+         margin-top: 15px;
+         width: 600px;
+         margin: 20px;
+         background-color: #ffff;
+         display:flex;
+         position: relative;
+         justify-content: center;
+         align-items: center;
+         padding: 10px;
+         border-radius: 5%;
+        }
+
+    
+    </style>
+
+</head>
+<body>
+    <!--Realizar carrito-->
+ <section>
+
+    <div class="my_order">
+        
+        <form action="/My_order" method="POST">
+
+            <label for="combos">Selecciona Tu Combo</label>
+            <select name="combo" id="combos" name="Combo">
+            <option value="Solomo Extranjero">Solomo Extranjero</option>
+            <option value="Max Chuzo">Max Chuzo</option>
+            <option value="Max Cañon">Max Cañon</option>
+            <option value="Max Trifasica">Max Trifasica</option>
+            <option value="Max Pollo Agridulce">Max Pollo Agridulce</option>
+            <option value="Max Chorizo">Max Chorizo</option>
+            <option value="Max Costillas Baby">Max Costillas Baby</option>
+            <option value="Max Mazorcada">Max Mazorcada</option>
+            <option value="Max Cerdo a la Naranja">Max Cerdo A la Naranja</option>
+            <option value="Max Longui">Max Longui</option>
+            <option value="Max Bombon de Pollo">Max Bombon de Pollo</option>
+            <option value="Max Salchi">Max Salchi</option>
+            <option value="Max Tocineta">Max Tocineta</option>
+            <option value="Max Maicitos">Max Maicitos</option>
+            <option value="Max Chicharron">Max Chicharron</option>
+            <option value="Max Paisa Siderense">Max Paisa Siderense</option>
+            <option value="Max Kids Ranchera">Max Kids Ranchera</option>
+            <option value="Max Papa Criolla">Max Papa Criolla</option>
+            <option value="Max Papa Chips">Max Papa Chips</option>
+            </select>
+            <p>
+                <label>¿Para Llevar?</label>
+                <label >
+                    <input type="radio" name="Parallevar">No
+                </label>
+                <label >
+                    <input type="radio" name="Parallevar">Si
+                </label>
+            </p>
+            <p>
+                <label>¿Con que Papas lo deseas?</label>
+                <label>
+                    <input type="radio" name="TipoPapa">Mixta
+                </label>
+                <label>
+                    <input type="radio" name="TipoPapa">Criolla
+                </label>
+                <label>
+                    <input type="radio" name="TipoPapa">Francesa
+                </label>
+                
+            </p>
+            <p>
+                <label>Selecciona las Salsas</label>
+                <label>
+                    <input type="checkbox" name="Salsas">Ceviche
+                </label>
+                <label > 
+                    <input type="checkbox" name="Salsas"> Ajo
+                </label>
+                <label>
+                    <input type="checkbox" name="salsas">Roja
+                </label>
+                <label>
+                    <input type="checkbox" name="Salsas">Rosada
+                </label>
+                <label>
+                    <input type="checkbox" name="salsas">Ninguna
+                </label>
+            </p>
+    
+    
+            <p>
+                <label for="Gaseosa">¿Que Deseas Tomar?</label>
+                <select name="Refresco" id="Gaseosa">
+                    <option value="Ninguna">Ninguna</option>
+                    <option value="Coca Cola">Coca Cola</option>
+                    <option value="Manzana">Manzana</option>
+                    <option value="Uva">Uva</option>
+                    <option value="Colombiana">Colombiana</option>
+                    <option value="Naranja">Jugo Valle</option>
+                </select>
+                
+            </p>
+            <label for="Adiciones">¿Deseas una adicion extra?</label>
+            <p>
+                <textarea name="Adiciones" id="Adiciones">Escribe aquí </textarea>
+            </p>
+
+            <p>
+                <button type="submit">Comprar</button>
+                <button type="menu">Agregar Pedido</button>
+                <button type="reset">Borrar</button>
+            </p>
+    
+        </form>
+    
+    </div>
+
+    <div class="info_domicilio">
+        <form action="/My_Domicilio" method="POST">
+                <p>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="Usuario" id="nombre">
+                </p>
+                <p>
+                    <label for="correo">Correo</label>
+                    <input type="email" name="Correo" id="correo" value="micorreo@gmail.com">
+                </p>
+                <p><label for="telefono">Celular</label>
+                <input type="tel" name="numero" id="telefono"></p>
+
+            <p><label for="Nacimiento">Fecha de Nacimiento</label>
+            <input type="date" name="fecha" id="Nacimiento"></p>
+            <p> <label for="Comprobante">Envia el Comprobante</label>
+                <!--Si queremos usar varios archivo ponemos Multiple-->
+            </p>
+            <p><input type="file" name="Comprobante" id="Comprobante" accept=".jpg"></p>
+            <p>
+                <button type="reset">Borrar</button>
+            </p>
+            <textarea name="comentario"></textarea>
+        
+        </form>
+    </div>
+
+</section>
+</body>
+</html>
